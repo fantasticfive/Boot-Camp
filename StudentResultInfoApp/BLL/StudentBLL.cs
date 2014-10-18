@@ -13,7 +13,11 @@ namespace StudentResultInfoApp.BLL
         StudentGateway aStudentGateway =new StudentGateway();
         public string Save(Student aStudent)
         {
-            if (aStudent.StudentRegNo == string.Empty || aStudent.StudentName == string.Empty || aStudent.StudentEmail == string.Empty || aStudent.StudentCourse==string.Empty|| aStudent.EnrollDate ==string.Empty)
+            if (aStudent.StudentRegNo == string.Empty 
+                || aStudent.StudentName == string.Empty 
+                || aStudent.StudentEmail == string.Empty 
+                || aStudent.StudentCourse==string.Empty
+                || aStudent.EnrollDate ==string.Empty)
             {
                 return "please fill up all field";
             }

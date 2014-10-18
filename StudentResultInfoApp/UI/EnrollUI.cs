@@ -49,7 +49,10 @@ namespace StudentResultInfoApp.UI
 
 
             
-            MessageBox.Show(aStudent.StudentRegNo);
+          ///to do  if(aStudentBll.IfStudent)
+          /// /////
+          /// ///
+          /// ///
             aStudent = aStudentBll.FindStudent(aStudent);
 
             
