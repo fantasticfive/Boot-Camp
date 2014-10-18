@@ -8,19 +8,19 @@ namespace StudentResultInfoApp.DAL.DAO
 {
     public class Student
     {
-        public string Student_RegNo { get; set; }
-        public string  Student_Name { get; set; }
-        public string Student_Email { get; set; }
-        public string  Student_Course { get; set; }
-        public string  Enroll_Date { get; set; }
+        public string StudentRegNo { get; set; }
+        public string  StudentName { get; set; }
+        public string StudentEmail { get; set; }
+        public string  StudentCourse { get; set; }
+        public string  EnrollDate { get; set; }
 
         public Student(string regNo,string name,string email,string course,string date):this()
         {
-            Student_RegNo = regNo;
-            Student_Name = name;
-            Student_Email = email;
-            Student_Course = course;
-            Enroll_Date = date;
+            StudentRegNo = regNo;
+            StudentName = name;
+            StudentEmail = email;
+            StudentCourse = course;
+            EnrollDate = date;
 
         }
 

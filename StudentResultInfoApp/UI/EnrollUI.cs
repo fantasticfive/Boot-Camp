@@ -15,27 +15,51 @@ namespace StudentResultInfoApp.UI
     public partial class EnrollUI : Form
     {
         StudentBLL  aStudentBll = new StudentBLL();
+        private Student nowInStudent;
+        private Student aStudent;
+
         public EnrollUI()
         {
             InitializeComponent();
         }
 
-        private void regNoFindButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void studentCourseEnrollButton_Click(object sender, EventArgs e)
         {
-            Student aStudent = new Student();
-            aStudent.Student_RegNo = studentRegNoTextBox.Text;
-            aStudent.Student_Name = studentNameTextBox.Text;
-            aStudent.Student_Email = studentEmailTextBox.Text;
-            aStudent.Student_Course = studentCourseComboBox.Text;
-            aStudent.Enroll_Date = courseEnrollDateTimePicker.Text;
+           aStudent = new Student();
+
+
+            aStudent.StudentRegNo = studentRegNoTextBox.Text;
+            aStudent.StudentName = studentNameTextBox.Text;
+            aStudent.StudentEmail = studentEmailTextBox.Text;
+            aStudent.StudentCourse = studentCourseComboBox.Text;
+            aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
 
            String msg = aStudentBll.Save(aStudent);
             MessageBox.Show(msg);
         }
+
+
+
+
+
+        private void regNoFindButton_Click(object sender, EventArgs e)
+        {
+            aStudent = new Student();
+            aStudent.StudentRegNo = studentRegNoTextBox.Text;
+
+
+            
+            MessageBox.Show(aStudent.StudentRegNo);
+            aStudent = aStudentBll.FindStudent(aStudent);
+
+            
+
+            //show in UI
+            studentRegNoTextBox.Text = aStudent.StudentRegNo;
+            studentEmailTextBox.Text = aStudent.StudentEmail;
+            studentNameTextBox.Text = aStudent.StudentName;
+            
+        }
+
     }
 }

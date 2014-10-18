@@ -13,13 +13,13 @@ namespace StudentResultInfoApp.BLL
         StudentGateway aStudentGateway =new StudentGateway();
         public string Save(Student aStudent)
         {
-            if (aStudent.Student_RegNo == string.Empty || aStudent.Student_Name == string.Empty || aStudent.Student_Email == string.Empty || aStudent.Student_Course==string.Empty|| aStudent.Enroll_Date ==string.Empty)
+            if (aStudent.StudentRegNo == string.Empty || aStudent.StudentName == string.Empty || aStudent.StudentEmail == string.Empty || aStudent.StudentCourse==string.Empty|| aStudent.EnrollDate ==string.Empty)
             {
                 return "please fill up all field";
             }
             else
             {
-                if (!HasThisRegNoValid(aStudent.Student_RegNo))
+                if (!HasThisRegNoValid(aStudent.StudentRegNo))
                 {
                     return aStudentGateway.Save(aStudent);
                 }
@@ -35,6 +35,14 @@ namespace StudentResultInfoApp.BLL
         private bool HasThisRegNoValid(string studentRegNo)
         {
             return aStudentGateway.HasThisRegNoValid(studentRegNo);
+        }
+
+        public Student FindStudent(Student aStudent)
+        {
+            Student nowInUiStudent = new Student();
+            aStudent = aStudentGateway.FindStudent(aStudent);
+
+            return aStudent;
         }
     }
 }

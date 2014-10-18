@@ -51,7 +51,7 @@
             this.regNoFindButton.Name = "regNoFindButton";
             this.regNoFindButton.Size = new System.Drawing.Size(88, 34);
             this.regNoFindButton.TabIndex = 0;
-            this.regNoFindButton.Text = "Find";
+            this.regNoFindButton.Text = "FindStudent";
             this.regNoFindButton.UseVisualStyleBackColor = true;
             this.regNoFindButton.Click += new System.EventHandler(this.regNoFindButton_Click);
             // 
