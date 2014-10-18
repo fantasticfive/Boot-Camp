@@ -39,12 +39,20 @@ namespace StudentResultInfoApp.DAL.GATEWAY
             string query = string.Format("SELECT * FROM t_Student WHERE Student_RegNo='{0}' ", studentRegNo);
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader aReader = command.ExecuteReader();
+
+
+
+        
             if (aReader.HasRows)
             {
+                connection.Close();
                 return true;
             }
+            connection.Close();
             return false;
         }
+
+
 
         public string Save(Student aStudent)
         {
@@ -56,19 +64,59 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
             int affectedRows = command.ExecuteNonQuery();
             connection.Close();
+
+
+
+
             if (affectedRows > 0)
                 return "Insert success";
             return "Something happens wromg";
 
+
+
+
         }
+        public string SaveForResultUi(Student aStudent)
+        {
+            connection.Open();
+            string query =
+                string.Format("UPDATE t_Student SET Student_Score_Persent ='{0}' " +
+                              "WHERE Student_RegNo = '{1}'",aStudent.ScorePersent,aStudent.StudentRegNo);
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            int affectedRows = command.ExecuteNonQuery();
+
+
+
+            
+            connection.Close();
+
+
+
+            if (affectedRows > 0 )
+                return "Insert success";
+
+
+
+            return "could not Insert";
+
+        }
+
+
+
+
+
+
 
         public Student FindStudent(Student aStudent)
         {
+            
+            
             string regNo = aStudent.StudentRegNo;
             connection.Open();
 
-            string query = string.Format("SELECT * FROM {0} WHERE Student_RegNo={1} "
-                ,TABLE_NAME 
+            string query = string.Format("SELECT * FROM {0} WHERE Student_RegNo={1}",TABLE_NAME
                 ,aStudent.StudentRegNo);
 
 
@@ -90,6 +138,7 @@ namespace StudentResultInfoApp.DAL.GATEWAY
             {
                 ;
             }
+
 
 
             connection.Close();

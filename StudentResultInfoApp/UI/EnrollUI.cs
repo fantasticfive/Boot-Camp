@@ -32,9 +32,12 @@ namespace StudentResultInfoApp.UI
             aStudent.StudentName = studentNameTextBox.Text;
             aStudent.StudentEmail = studentEmailTextBox.Text;
             aStudent.StudentCourse = studentCourseComboBox.Text;
+
+            bool isRequestFromResultUI = aStudentBll.CheckForResultUi(courseEnrollDateTimePicker.Text);
+
             aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
 
-           String msg = aStudentBll.Save(aStudent);
+           String msg = aStudentBll.SaveForResultUi(aStudent);
             MessageBox.Show(msg);
         }
 
@@ -49,10 +52,7 @@ namespace StudentResultInfoApp.UI
 
 
             
-          ///to do  if(aStudentBll.IfStudent)
-          /// /////
-          /// ///
-          /// ///
+        
             aStudent = aStudentBll.FindStudent(aStudent);
 
             

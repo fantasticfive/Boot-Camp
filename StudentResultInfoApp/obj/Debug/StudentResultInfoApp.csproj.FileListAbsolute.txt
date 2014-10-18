@@ -34,3 +34,15 @@ C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\Student
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.pdb
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csprojResolveAssemblyReference.cache
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.EnrollUI.resources
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.MainUI.resources
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.Properties.Resources.resources
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
+C:\Users\Shapla\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
