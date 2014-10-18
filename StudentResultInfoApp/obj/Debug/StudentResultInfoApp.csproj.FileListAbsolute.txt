@@ -37,3 +37,6 @@ C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\Student
 C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
 C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
 C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New folder\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New folder\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New folder\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
