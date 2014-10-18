@@ -34,3 +34,6 @@ C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\Student
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
 C:\Users\PC21\Documents\Visual Studio 2013\Projects\boot campt\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
