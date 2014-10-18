@@ -39,7 +39,7 @@ namespace StudentResultInfoApp.UI
         }
 
 
-
+        private int test;
 
 
         private void regNoFindButton_Click(object sender, EventArgs e)
