@@ -60,7 +60,12 @@ namespace StudentResultInfoApp.UI
 
 
 
-            aStudentBll.SaveForResultUi(aStudent);
+            string msg = aStudentBll.SaveForResultUi(aStudent);
+
+
+            MessageBox.Show(msg);
         }
+
+     
     }
 }

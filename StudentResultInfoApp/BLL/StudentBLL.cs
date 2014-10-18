@@ -53,7 +53,7 @@ namespace StudentResultInfoApp.BLL
 
         public Student FindStudent(Student aStudent)
         {
-            MessageBox.Show("adf");
+           
             Student nowInUiStudent = new Student();
 
 
