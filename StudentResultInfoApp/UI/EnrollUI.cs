@@ -37,7 +37,7 @@ namespace StudentResultInfoApp.UI
 
             aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
 
-           String msg = aStudentBll.SaveForResultUi(aStudent);
+           String msg = aStudentBll.Save(aStudent);
             MessageBox.Show(msg);
         }
 

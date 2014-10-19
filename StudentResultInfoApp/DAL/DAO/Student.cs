@@ -16,6 +16,8 @@ namespace StudentResultInfoApp.DAL.DAO
 
         public double ScorePersent { get; set; }
 
+         
+
 
 
         public Student(string regNo, string name, string email, string course, string date ,double scorePersent) 

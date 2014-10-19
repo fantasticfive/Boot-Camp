@@ -24,7 +24,7 @@ namespace StudentResultInfoApp.BLL
             }
             else
             {
-                if (!HasThisRegNoValid(aStudent.StudentRegNo))
+                if (HasThisRegNoValid(aStudent.StudentRegNo))
                 {
 
 
@@ -85,7 +85,6 @@ namespace StudentResultInfoApp.BLL
             {
                 if (!HasThisRegNoValid(aStudent.StudentRegNo))
                 {
-
                     return "RegNo address already exist";
                 }
                 else

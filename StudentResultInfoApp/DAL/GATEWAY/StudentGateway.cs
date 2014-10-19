@@ -57,8 +57,11 @@ namespace StudentResultInfoApp.DAL.GATEWAY
         public string Save(Student aStudent)
         {
             connection.Open();
-            string query = string.Format("INSERT INTO t_Student VALUES('{0}','{1}','{2}','{3}','{4}')", aStudent.StudentRegNo,
-                aStudent.StudentName, aStudent.StudentEmail,aStudent.StudentCourse,aStudent.EnrollDate);
+            string query =
+
+                string.Format("INSERT INTO t_Course VALUES('{0}','{1}','{2}')",
+                                                            aStudent.StudentCourse, aStudent.StudentRegNo,aStudent.EnrollDate);
+                  
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -80,8 +83,8 @@ namespace StudentResultInfoApp.DAL.GATEWAY
         {
             connection.Open();
             string query =
-                string.Format("UPDATE t_Student SET Student_Score_Persent ='{0}' " +
-                              "WHERE Student_RegNo = '{1}'",aStudent.ScorePersent,aStudent.StudentRegNo);
+                string.Format("UPDATE t_Student SET Student_Score_Persent ='{0}',Enroll_Date='{1}' " +
+                              "WHERE Student_RegNo = '{2}'",aStudent.ScorePersent,aStudent.EnrollDate ,aStudent.StudentRegNo);
 
             SqlCommand command = new SqlCommand(query, connection);
 

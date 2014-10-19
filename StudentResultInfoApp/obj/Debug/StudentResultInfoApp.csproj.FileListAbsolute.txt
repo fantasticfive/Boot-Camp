@@ -55,3 +55,15 @@ C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New fol
 C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New folder\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
 C:\Users\zahid\Documents\Visual Studio 2012\Projects\boot camp\Boot-Camp\New folder\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
 >>>>>>> 9621d92f30993d0c3cdfc2b634c17fb530667a29
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.pdb
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csprojResolveAssemblyReference.cache
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.EnrollUI.resources
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.MainUI.resources
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.Properties.Resources.resources
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
+C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
