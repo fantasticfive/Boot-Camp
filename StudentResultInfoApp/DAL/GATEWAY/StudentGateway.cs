@@ -14,6 +14,7 @@ namespace StudentResultInfoApp.DAL.GATEWAY
         private SqlConnection connection;
 
         private string TABLE_NAME;
+        private string TABLE_NAME1;
 
 
 
@@ -24,6 +25,7 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
             string connectionString = "";
             TABLE_NAME = "t_Student";
+            TABLE_NAME1 = "t_Course";
 
             if (settings != null)
                 connectionString = settings.ConnectionString;
