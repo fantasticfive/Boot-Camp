@@ -71,8 +71,11 @@ namespace StudentResultInfoApp.BLL
             return true;
         }
 
-        public string SaveForResultUi(Student aStudent)
+        public string SaveForResultUi(Student aStudent, Result aResult)
         {
+
+           
+
             if (aStudent.StudentRegNo == string.Empty
                || aStudent.StudentName == string.Empty
                || aStudent.StudentEmail == string.Empty
@@ -90,7 +93,7 @@ namespace StudentResultInfoApp.BLL
                 else
                 {
                     return aStudentGateway.SaveForResultUi(aStudent);
-                    
+                   
                 }
 
 
@@ -101,6 +104,8 @@ namespace StudentResultInfoApp.BLL
         {
             List<Student> students = new List<Student>();
             ListViewItem item = new ListViewItem();
+            StudentBLL aStudentBll;
+
             students = aStudentBll.ShowStudentInfoListView();
             foreach (Student aStudent in students)
             {

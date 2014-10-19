@@ -3,23 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudentResultInfoApp.DAL.DAO;
+using StudentResultInfoApp.DAL.GATEWAY;
 
 namespace StudentResultInfoApp.BLL
 {
     class ResultBll
     {
-        double Score { set; get; }
+
+        StudentGateway aStudentGateway = new StudentGateway();
+        ResultGateWay aResultGateWay = new ResultGateWay();
 
 
-
-        public double CalculateAvg()
+        public bool SaveFromResultUi(Result aResult)
         {
-            return 0;
-        }
+            ResultGateWay aResultGateWay = new ResultGateWay();
+            if (!HasThisRegNoValid(aStudent.StudentRegNo))
+            {
+                return "RegNo address already exist";
+            }
+            else
+            {
+                return aStudentGateway.SaveForResultUi(aStudent);
 
-        public double CalculateGrade()
-        {
-            return 0;
+            }
         }
+        private bool HasThisRegNoValid(string studentRegNo)
+        {
+            return aStudentGateway.HasThisRegNoValid(studentRegNo);
+        }
+        
     }
 }

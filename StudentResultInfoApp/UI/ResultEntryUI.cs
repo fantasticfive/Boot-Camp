@@ -17,6 +17,8 @@ namespace StudentResultInfoApp.UI
 
         private StudentBLL aStudentBll;
         private Student aStudent;
+        private ResultBll aResultBll;
+        private Result aResult;
 
         public ResultEntryUI()
         {
@@ -48,6 +50,8 @@ namespace StudentResultInfoApp.UI
         {
             aStudentBll = new StudentBLL();
             aStudent = new Student();
+            aResultBll = new ResultBll();
+            aResult = new Result();
 
 
             aStudent.StudentRegNo = studentRegNoTextBox.Text;
@@ -57,11 +61,11 @@ namespace StudentResultInfoApp.UI
             aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
             aStudent.ScorePersent = Convert.ToDouble(scorePersentTextBox.Text);
 
+            string msg  = "";
 
 
-
-            string msg = aStudentBll.SaveForResultUi(aStudent);
-
+             aStudentBll.SaveForResultUi(aStudent,aResult);
+            aResultBll.SaveFromResultUi(aResult);
 
             MessageBox.Show(msg);
         }
