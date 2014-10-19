@@ -47,5 +47,26 @@ namespace StudentResultInfoApp.DAL.GATEWAY
             connection.Close();
             return false;
         }
+
+        public string InsertIntoResult(Student aStudent)
+        {
+
+            connection.Open();
+
+            string query = string.Format("INSERT INTO t_Result VALUES('{0}','{1}')", aStudent.RegNo, aStudent.ResulttScore);
+
+            SqlCommand command = new SqlCommand(query, connection);
+            int affectedRows = command.ExecuteNonQuery();
+            connection.Close();
+
+
+
+
+            if (affectedRows > 0)
+                return "Insert success";
+            return "Something happens wromg";
+
+        }
+
     }
 }
