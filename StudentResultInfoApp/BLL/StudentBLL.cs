@@ -96,5 +96,21 @@ namespace StudentResultInfoApp.BLL
 
             }
         }
+
+        public List<Student> ShoInListViewFromDB(Student aStudent1)
+        {
+            List<Student> students = new List<Student>();
+            ListViewItem item = new ListViewItem();
+            students = aStudentBll.ShowStudentInfoListView();
+            foreach (Student aStudent in students)
+            {
+                item.Text = aStudent.ToString();
+                item.SubItems.Add(aStudent.ToString());
+
+            }
+
+            studentEnrollCourseListView.Items.Add(item.ToString());
+            return aStudentGateway.ShowStudentInfoListView(aStudent1);
+        }
     }
 }

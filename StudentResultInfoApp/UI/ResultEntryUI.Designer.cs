@@ -154,6 +154,7 @@
             this.viewResultSheetButton.TabIndex = 18;
             this.viewResultSheetButton.Text = "View Result Sheet";
             this.viewResultSheetButton.UseVisualStyleBackColor = true;
+            this.viewResultSheetButton.Click += new System.EventHandler(this.viewResultSheetButton_Click);
             // 
             // label6
             // 

@@ -66,6 +66,11 @@ namespace StudentResultInfoApp.UI
             MessageBox.Show(msg);
         }
 
+        private void viewResultSheetButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
      
     }
 }

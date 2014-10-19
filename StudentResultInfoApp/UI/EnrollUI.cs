@@ -61,7 +61,11 @@ namespace StudentResultInfoApp.UI
             studentRegNoTextBox.Text = aStudent.StudentRegNo;
             studentEmailTextBox.Text = aStudent.StudentEmail;
             studentNameTextBox.Text = aStudent.StudentName;
-            
+
+
+
+            aStudentBll.ShoInListViewFromDB(aStudent);
+
         }
 
     }
