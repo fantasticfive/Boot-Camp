@@ -67,3 +67,13 @@ C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResul
 C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
 C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
 C:\Users\cse\Documents\Visual Studio 2013\Projects\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csprojResolveAssemblyReference.cache
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.EnrollUI.resources
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.MainUI.resources
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.Properties.Resources.resources
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
+C:\Users\ACM\Documents\Visual Studio 2013\Projects\boot camp\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache

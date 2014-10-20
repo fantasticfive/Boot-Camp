@@ -45,7 +45,10 @@ namespace StudentResultInfoApp.BLL
         }
 
 
-
+        public List<Course> GetAllCourse()
+        {
+            return aStudentGateway.GetAllCourse();
+        }
 
         private bool HasThisRegNoValid(string studentRegNo)
         {

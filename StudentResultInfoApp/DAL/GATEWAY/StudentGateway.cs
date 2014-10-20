@@ -111,6 +111,29 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
 
 
+        public List<Course> GetAllCourse()
+        {
+            connection.Open();
+            string querry = string.Format("SELECT * FROM t_Course");
+            SqlCommand command = new SqlCommand(querry, connection);
+            SqlDataReader aReader = command.ExecuteReader();
+            List<Course> cousres = new List<Course>();
+            if (aReader.HasRows)
+            {
+
+                while (aReader.Read())
+                {
+                    Course aCourse = new Course();
+                    aCourse.CourseName = aReader[1].ToString();
+                    cousres.Add(aCourse);
+                }
+
+
+            }
+
+            connection.Close();
+            return cousres;
+        }
 
 
 

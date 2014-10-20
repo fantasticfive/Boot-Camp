@@ -130,6 +130,7 @@
             this.studentEnrollCourseListView.Size = new System.Drawing.Size(513, 109);
             this.studentEnrollCourseListView.TabIndex = 0;
             this.studentEnrollCourseListView.UseCompatibleStateImageBehavior = false;
+            this.studentEnrollCourseListView.View = System.Windows.Forms.View.Details;
             // 
             // studentCourseComboBox
             // 

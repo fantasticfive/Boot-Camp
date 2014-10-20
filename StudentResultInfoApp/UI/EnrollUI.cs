@@ -21,6 +21,13 @@ namespace StudentResultInfoApp.UI
         public EnrollUI()
         {
             InitializeComponent();
+            List<Course> courses = new List<Course>();
+            studentCourseComboBox.DisplayMember = "CourseName";
+            courses = aStudentBll.GetAllCourse();
+            foreach (Course aCourse in courses)
+            {
+                studentCourseComboBox.Items.Add(aCourse);
+            }
         }
 
         private void studentCourseEnrollButton_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace StudentResultInfoApp.UI
 
 
         private int test;
-
+        private CourseBLL aCourseBll;
 
         private void regNoFindButton_Click(object sender, EventArgs e)
         {
@@ -65,6 +72,27 @@ namespace StudentResultInfoApp.UI
 
 
             aStudentBll.ShoInListViewFromDB(aStudent);
+
+            ShoInListViewFromDB();
+
+        }
+        private void ShoInListViewFromDB()
+        {
+
+
+            List<Course> courses = new List<Course>();
+            ListViewItem item = new ListViewItem();
+
+            aCourseBll = new CourseBLL();
+            courses = aCourseBll.ShoInListViewFromDB(aStudent);
+
+
+            foreach (Course aCourse in courses)
+            {
+                item.Text = aCourse.CourseName;
+                item.SubItems.Add(aCourse.EnrollDate);
+            }
+            studentEnrollCourseListView.Items.Add(item);
 
         }
 
