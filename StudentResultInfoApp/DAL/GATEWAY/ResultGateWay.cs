@@ -112,5 +112,18 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
         }
 
+        public void DoAnother()
+        {
+            connection.Open();
+            string query = string.Format("SELECT Score FROM t_Result WHERE Student_RegNo='{0}' ", aStudent.StudentRegNo);
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader aReader = command.ExecuteReader();
+
+            List<double> allResult = new List<double>();
+
+
+
+            connection.Close();
+        }
     }
 }
