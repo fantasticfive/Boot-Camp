@@ -60,22 +60,7 @@ namespace StudentResultInfoApp.UI
 
         private void SaveForResultUi_Click(object sender, EventArgs e)
         {
-            aStudentBll = new StudentBLL();
-            aStudent = new Student();
-            aResultBll = new ResultBll();
-            aResult = new Result();
-
-
-             aStudent.StudentRegNo = studentRegNoTextBox.Text;
-            aStudent.StudentName = studentNameTextBox.Text;
-            aStudent.StudentEmail = studentEmailTextBox.Text;
-            aStudent.StudentCourse = studentCourseComboBox.Text;
-            aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
-            aStudent.ScorePersent = Convert.ToDouble(scorePersentTextBox.Text);
-            aResult.Score = aStudent.ScorePersent;
-
-            string msg  = "op Performed";
-
+            
 
            aStudentBll.SaveForResultUi(aStudent,aResult);
            string aa = aResultBll.SaveFromResultUi(aResult,aStudent);
