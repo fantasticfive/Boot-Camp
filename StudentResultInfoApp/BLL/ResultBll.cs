@@ -8,30 +8,37 @@ using StudentResultInfoApp.DAL.GATEWAY;
 
 namespace StudentResultInfoApp.BLL
 {
-    class ResultBll
+    internal class ResultBll
     {
 
-        StudentGateway aStudentGateway = new StudentGateway();
+        private StudentGateway aStudentGateway = new StudentGateway();
         private ResultGateWay aResultGateWay;
 
 
         public string SaveFromResultUi(Result aResult, Student aStudent)
         {
-           aResultGateWay = new ResultGateWay();
+            aResultGateWay = new ResultGateWay();
             if (!HasThisRegNoValid(aStudent.StudentRegNo))
             {
                 return "RegNo not exist";
             }
             else
             {
-                return aResultGateWay.SaveForResultUi(aResult,aStudent).ToString();
+                return aResultGateWay.SaveForResultUi(aResult, aStudent).ToString();
 
             }
         }
+
         private bool HasThisRegNoValid(string studentRegNo)
         {
             return aResultGateWay.HasThisRegNoValid(studentRegNo);
         }
-        
+
+        private void Do(Student a)
+        {
+            aResultGateWay.HasThisRegNoValid(a);
+
+        }
+
     }
 }

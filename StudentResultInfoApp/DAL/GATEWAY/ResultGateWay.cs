@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudentResultInfoApp.DAL.DAO;
 
 namespace StudentResultInfoApp.DAL.GATEWAY
 {
@@ -14,7 +15,7 @@ namespace StudentResultInfoApp.DAL.GATEWAY
         private SqlConnection connection;
         string  TABLE_NAME;
         string TABLE_NAME1 ;
-        ResultGateWay()
+        public ResultGateWay()
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["con"];
 
@@ -48,12 +49,14 @@ namespace StudentResultInfoApp.DAL.GATEWAY
             return false;
         }
 
-        public string InsertIntoResult(Student aStudent)
+  
+        public bool SaveForResultUi(Result aResult, Student aStudent)
         {
 
             connection.Open();
 
-            string query = string.Format("INSERT INTO t_Result VALUES('{0}','{1}')", aStudent.RegNo, aStudent.ResulttScore);
+            string query = string.Format("INSERT INTO t_Result VALUES('{0}','{1}')", aStudent.StudentRegNo
+                , aStudent.ScorePersent);
 
             SqlCommand command = new SqlCommand(query, connection);
             int affectedRows = command.ExecuteNonQuery();
@@ -63,8 +66,49 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
 
             if (affectedRows > 0)
-                return "Insert success";
-            return "Something happens wromg";
+                return true;
+            return false;
+
+        }
+
+        public List<double> GetAllScore(Student aStudent)
+        {
+            connection.Open();
+            string query = string.Format("SELECT Score FROM t_Result WHERE Student_RegNo='{0}' ", aStudent.StudentRegNo);
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader aReader = command.ExecuteReader();
+
+            List<double> allResult = new List<double>();
+
+
+
+            if (aReader.HasRows)
+            {
+                while (aReader.Read())
+                {
+                    allResult.Add(Convert.ToDouble(aReader.GetValue(0)));
+                }
+
+                connection.Close();
+                return allResult;
+            }
+            connection.Close();
+            return allResult;
+        }
+
+        private void Do(Student a)
+        {
+            connection.Open();
+            string query = string.Format("SELECT Score FROM t_Result WHERE Student_RegNo='{0}' ", aStudent.StudentRegNo);
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader aReader = command.ExecuteReader();
+
+            List<double> allResult = new List<double>();
+
+
+
+            connection.Close();
+       
 
         }
 
