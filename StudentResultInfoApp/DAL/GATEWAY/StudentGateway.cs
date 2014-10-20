@@ -205,5 +205,33 @@ namespace StudentResultInfoApp.DAL.GATEWAY
             return aStudent;
 
         }
+
+        public void DoSomething()
+        {
+            connection.Open();
+            string querry = string.Format("SELECT * FROM t_Course");
+            SqlCommand command = new SqlCommand(querry, connection);
+
+            SqlDataReader aReader = command.ExecuteReader();
+
+
+            List<Student> students = new List<Student>();
+
+            //ListView students = new ListView();
+
+
+
+            if (aReader.HasRows)
+            {
+
+                while (aReader.Read())
+                {
+
+                }
+
+            }
+            connection.Close();
+           
+        }
     }
 }

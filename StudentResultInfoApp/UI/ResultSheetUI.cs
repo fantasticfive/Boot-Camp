@@ -45,6 +45,8 @@ namespace StudentResultInfoApp.UI
 
             string grade = aResult.CalculateGrade(result);
             gradeLetterTextBox.Text = grade;
+
+
         }
         }
     }
