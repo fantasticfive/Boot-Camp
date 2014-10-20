@@ -30,6 +30,10 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.resultSheetListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.findButtonInResultSheet = new System.Windows.Forms.Button();
             this.gradeLetterTextBox = new System.Windows.Forms.TextBox();
             this.averageScoreTextBoxInResultSheet = new System.Windows.Forms.TextBox();
@@ -51,18 +55,45 @@
             this.groupBox2.Controls.Add(this.resultSheetListView);
             this.groupBox2.Location = new System.Drawing.Point(14, 106);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(530, 152);
+            this.groupBox2.Size = new System.Drawing.Size(517, 152);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Result";
             // 
             // resultSheetListView
             // 
-            this.resultSheetListView.Location = new System.Drawing.Point(10, 19);
+            this.resultSheetListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.resultSheetListView.GridLines = true;
+            this.resultSheetListView.Location = new System.Drawing.Point(0, 19);
             this.resultSheetListView.Name = "resultSheetListView";
             this.resultSheetListView.Size = new System.Drawing.Size(507, 121);
             this.resultSheetListView.TabIndex = 13;
             this.resultSheetListView.UseCompatibleStateImageBehavior = false;
+            this.resultSheetListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Course Code";
+            this.columnHeader1.Width = 106;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Title";
+            this.columnHeader2.Width = 200;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Score";
+            this.columnHeader3.Width = 115;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Grade Letter";
+            this.columnHeader4.Width = 83;
             // 
             // findButtonInResultSheet
             // 
@@ -72,6 +103,7 @@
             this.findButtonInResultSheet.TabIndex = 12;
             this.findButtonInResultSheet.Text = "Find";
             this.findButtonInResultSheet.UseVisualStyleBackColor = true;
+            this.findButtonInResultSheet.Click += new System.EventHandler(this.findButtonInResultSheet_Click);
             // 
             // gradeLetterTextBox
             // 
@@ -205,5 +237,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
