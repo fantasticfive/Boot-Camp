@@ -46,15 +46,16 @@ namespace StudentResultInfoApp.UI
 
 
 
+            {
+                aStudent = aStudentBll.FindStudent(aStudent);
 
-            aStudent = aStudentBll.FindStudent(aStudent);
 
 
-
-            //show in UI
-            studentRegNoTextBox.Text = aStudent.StudentRegNo;
-            studentEmailTextBox.Text = aStudent.StudentEmail;
-            studentNameTextBox.Text = aStudent.StudentName;
+                //show in UI
+                studentRegNoTextBox.Text = aStudent.StudentRegNo;
+                studentEmailTextBox.Text = aStudent.StudentEmail;
+                studentNameTextBox.Text = aStudent.StudentName;
+            }
         }
 
         private void SaveForResultUi_Click(object sender, EventArgs e)
@@ -84,7 +85,9 @@ namespace StudentResultInfoApp.UI
 
         private void viewResultSheetButton_Click(object sender, EventArgs e)
         {
-            ResultSheetUI aResultSheetUi = new ResultSheetUI();
+
+            
+            ResultSheetUI aResultSheetUi = new ResultSheetUI(studentRegNoTextBox.Text);
             aResultSheetUi.ShowDialog();
         }
 

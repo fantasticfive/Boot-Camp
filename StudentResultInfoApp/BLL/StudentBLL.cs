@@ -56,7 +56,7 @@ namespace StudentResultInfoApp.BLL
            
             Student nowInUiStudent = new Student();
 
-
+            if(aStudent.StudentRegNo != "")
             aStudent = aStudentGateway.FindStudent(aStudent);
 
             return aStudent;

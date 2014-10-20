@@ -64,21 +64,21 @@ namespace StudentResultInfoApp.UI
             aStudent.StudentRegNo = studentRegNoTextBox.Text;
 
 
-            
-        
-            aStudent = aStudentBll.FindStudent(aStudent);
 
-            
-
-            //show in UI
-            studentRegNoTextBox.Text = aStudent.StudentRegNo;
-            studentEmailTextBox.Text = aStudent.StudentEmail;
-            studentNameTextBox.Text = aStudent.StudentName;
+            {
+                aStudent = aStudentBll.FindStudent(aStudent);
 
 
-            ShoInListViewFromDB(aStudent);
-            
 
+                //show in UI
+                studentRegNoTextBox.Text = aStudent.StudentRegNo;
+                studentEmailTextBox.Text = aStudent.StudentEmail;
+                studentNameTextBox.Text = aStudent.StudentName;
+
+
+                ShoInListViewFromDB(aStudent);
+
+            }
         }
 
         private void ShoInListViewFromDB(Student aStudent)

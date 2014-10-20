@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentResultInfoApp.DAL.DAO
 {
-    class Course
+    public class Course
     {
         public int CourseId { get; set; }
        

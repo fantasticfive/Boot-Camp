@@ -17,10 +17,25 @@ namespace StudentResultInfoApp.UI
         private Student aStudent;
         private StudentBLL aStudentBll;
         private Result aResult;
+        private string regNFromOther;
 
         public ResultSheetUI()
         {
             InitializeComponent();
+            regNFromOther = "";
+        }
+
+        public ResultSheetUI(string text)
+        {
+            regNFromOther = "";
+            aStudentBll = new StudentBLL();
+            aStudent =new Student();
+
+            InitializeComponent();
+
+            regNFromOther = text;
+            studentRegNoTextBoxInResultSheet.Text = regNFromOther;
+
         }
 
         private void findButtonInResultSheet_Click(object sender, EventArgs e)
@@ -28,32 +43,37 @@ namespace StudentResultInfoApp.UI
             aStudent = new Student();
             aStudentBll = new StudentBLL();
             aResult = new Result();
+
+           
             aStudent.StudentRegNo = studentRegNoTextBoxInResultSheet.Text;
 
 
-            aStudent = aStudentBll.FindStudent(aStudent);
-            
-
-            //show in UI
-            studentRegNoTextBoxInResultSheet.Text = aStudent.StudentRegNo;
-            studentEmailTextBoxInResultSheet.Text = aStudent.StudentEmail;
-            studentNameTextBoxInResultSheet.Text = aStudent.StudentName;
-
-            double result = aResult.CalculateAvg(aStudent);
-
-            averageScoreTextBoxInResultSheet.Text = result.ToString();
-
-            string grade = aResult.CalculateGrade(result);
-            gradeLetterTextBox.Text = grade;
+           
+            {
+                aStudent = aStudentBll.FindStudent(aStudent);
 
 
-            ShoInListViewFromDB(aStudent);
-            
+                //show in UI
+                studentRegNoTextBoxInResultSheet.Text = aStudent.StudentRegNo;
+                studentEmailTextBoxInResultSheet.Text = aStudent.StudentEmail;
+                studentNameTextBoxInResultSheet.Text = aStudent.StudentName;
+
+                double result = aResult.CalculateAvg(aStudent);
+
+                averageScoreTextBoxInResultSheet.Text = result.ToString();
+
+                string grade = aResult.CalculateGrade(result);
+                gradeLetterTextBox.Text = grade;
+
+
+                ShoInListViewFromDB(aStudent);
+            }
         }
 
 
         private Course aCourse;
         private CourseBLL aCourseBll;
+
 
         private void ShoInListViewFromDB(Student aStudent)
         {

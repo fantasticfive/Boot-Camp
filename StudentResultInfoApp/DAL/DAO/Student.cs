@@ -11,12 +11,12 @@ namespace StudentResultInfoApp.DAL.DAO
         public string StudentRegNo { get; set; }
         public string  StudentName { get; set; }
         public string StudentEmail { get; set; }
-        public string  StudentCourse { get; set; }
         public string  EnrollDate { get; set; }
 
         public double ScorePersent { get; set; }
         public Result StudentRestult { set; get; }
-         
+        public Course course { set; get; }
+ 
 
 
 
@@ -42,6 +42,19 @@ namespace StudentResultInfoApp.DAL.DAO
 
         }
 
-
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        public string StudentCourse { get; set; }
+       
     }
 }
