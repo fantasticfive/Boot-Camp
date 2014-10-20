@@ -70,3 +70,15 @@ C:\Users\Mhr\Desktop\gitup test\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\
 C:\Users\Mhr\Desktop\gitup test\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
 C:\Users\Mhr\Desktop\gitup test\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
 C:\Users\Mhr\Desktop\gitup test\boot 1\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe.config
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.exe
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.pdb
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.exe
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\bin\Debug\StudentResultInfoApp.pdb
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csprojResolveAssemblyReference.cache
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.EnrollUI.resources
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.MainUI.resources
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.Properties.Resources.resources
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultEntryUI.resources
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.UI.ResultSheetUI.resources
+C:\Users\Mhr\Desktop\git test2\Boot-Camp\StudentResultInfoApp\obj\Debug\StudentResultInfoApp.csproj.GenerateResource.Cache
