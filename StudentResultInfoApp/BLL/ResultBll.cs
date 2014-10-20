@@ -12,25 +12,25 @@ namespace StudentResultInfoApp.BLL
     {
 
         StudentGateway aStudentGateway = new StudentGateway();
-        ResultGateWay aResultGateWay = new ResultGateWay();
+        private ResultGateWay aResultGateWay;
 
 
-        public bool SaveFromResultUi(Result aResult)
+        public string SaveFromResultUi(Result aResult, Student aStudent)
         {
-            ResultGateWay aResultGateWay = new ResultGateWay();
+           aResultGateWay = new ResultGateWay();
             if (!HasThisRegNoValid(aStudent.StudentRegNo))
             {
-                return "RegNo address already exist";
+                return "RegNo not exist";
             }
             else
             {
-                return aStudentGateway.SaveForResultUi(aStudent);
+                return aResultGateWay.SaveForResultUi(aResult,aStudent).ToString();
 
             }
         }
         private bool HasThisRegNoValid(string studentRegNo)
         {
-            return aStudentGateway.HasThisRegNoValid(studentRegNo);
+            return aResultGateWay.HasThisRegNoValid(studentRegNo);
         }
         
     }
