@@ -11,6 +11,9 @@ namespace StudentResultInfoApp.BLL
 {
     class StudentBLL
     {
+	int kk = 10;
+	int kk1 = 12;
+
         StudentGateway aStudentGateway =new StudentGateway();
         public string Save(Student aStudent)
         {
