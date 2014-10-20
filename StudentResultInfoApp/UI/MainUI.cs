@@ -14,7 +14,7 @@ namespace StudentResultInfoApp
 {
     public partial class MainUI : Form
     {
-        private StudentBLL aStudentBll = new StudentBLL();
+        private StudentBLL aStudentBll;
         public MainUI()
         {
             InitializeComponent();
