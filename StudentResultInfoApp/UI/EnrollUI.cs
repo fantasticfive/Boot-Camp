@@ -17,16 +17,19 @@ namespace StudentResultInfoApp.UI
         StudentBLL  aStudentBll = new StudentBLL();
         private Student nowInStudent;
         private Student aStudent;
-
+        
         public EnrollUI()
         {
             InitializeComponent();
             List<Course> courses = new List<Course>();
+
+
+
             studentCourseComboBox.DisplayMember = "CourseName";
             courses = aStudentBll.GetAllCourse();
             foreach (Course aCourse in courses)
             {
-                studentCourseComboBox.Items.Add(aCourse);
+                studentCourseComboBox.Items.Add(aCourse.CourseName);
             }
         }
 
@@ -46,11 +49,14 @@ namespace StudentResultInfoApp.UI
 
            String msg = aStudentBll.Save(aStudent);
             MessageBox.Show(msg);
+            ShoInListViewFromDB(aStudent);
+            
         }
 
 
         private int test;
         private CourseBLL aCourseBll;
+
 
         private void regNoFindButton_Click(object sender, EventArgs e)
         {
@@ -70,31 +76,54 @@ namespace StudentResultInfoApp.UI
             studentNameTextBox.Text = aStudent.StudentName;
 
 
-
-            aStudentBll.ShoInListViewFromDB(aStudent);
-
-            ShoInListViewFromDB();
+            ShoInListViewFromDB(aStudent);
+            
 
         }
-        private void ShoInListViewFromDB()
+
+        private void ShoInListViewFromDB(Student aStudent)
         {
 
+            
+            
+            studentEnrollCourseListView.Items.Clear();
 
             List<Course> courses = new List<Course>();
-            ListViewItem item = new ListViewItem();
+            ListViewItem listViewItem = new ListViewItem();
 
             aCourseBll = new CourseBLL();
-            courses = aCourseBll.ShoInListViewFromDB(aStudent);
+             courses = aCourseBll.ShoInListViewFromDB(aStudent);
 
 
+
+
+
+            int i = 1;
             foreach (Course aCourse in courses)
             {
-                item.Text = aCourse.CourseName;
-                item.SubItems.Add(aCourse.EnrollDate);
+            
+                
+                
+                ListViewItem listViewItem1= new ListViewItem(i.ToString());
+                listViewItem1.SubItems.Add(aCourse.CourseName);
+                listViewItem1.SubItems.Add(aCourse.EnrollDate);
+
+             studentEnrollCourseListView.Items.Add(listViewItem1);
+
+                i++;
             }
-            studentEnrollCourseListView.Items.Add(item);
+            
 
         }
 
+        private void EnrollUI_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        
+       
     }
 }
+ 

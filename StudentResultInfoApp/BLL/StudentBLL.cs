@@ -11,9 +11,6 @@ namespace StudentResultInfoApp.BLL
 {
     class StudentBLL
     {
-		
-
-	
         StudentGateway aStudentGateway =new StudentGateway();
         public string Save(Student aStudent)
         {
@@ -45,10 +42,7 @@ namespace StudentResultInfoApp.BLL
         }
 
 
-        public List<Course> GetAllCourse()
-        {
-            return aStudentGateway.GetAllCourse();
-        }
+
 
         private bool HasThisRegNoValid(string studentRegNo)
         {
@@ -106,25 +100,13 @@ namespace StudentResultInfoApp.BLL
             }
         }
 
-        public List<Student> ShoInListViewFromDB(Student aStudent1)
+
+        private CourseGateWay aCourseGateWay;
+
+        public List<Course> GetAllCourse()
         {
-            List<Student> students = new List<Student>();
-            
-			ListViewItem item2 = new ListViewItem();
-		
-			ListViewItem item = new ListViewItem();
-            StudentBLL aStudentBll;
-
-            students = aStudentBll.ShowStudentInfoListView();
-            foreach (Student aStudent in students)
-            {
-                item.Text = aStudent.ToString();
-                item.SubItems.Add(aStudent.ToString());
-
-            }
-
-            studentEnrollCourseListView.Items.Add(item.ToString());
-            return aStudentGateway.ShowStudentInfoListView(aStudent1);
+            aCourseGateWay = new CourseGateWay();
+            return aCourseGateWay.GetAllCourse();
         }
     }
 }

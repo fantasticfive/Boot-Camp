@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentResultInfoApp.BLL;
 using StudentResultInfoApp.DAL.DAO;
-using StudentResultInfoApp.DAL.GATEWAY;
 
 namespace StudentResultInfoApp.UI
 {
     public partial class ResultSheetUI : Form
     {
-        
         private Student aStudent;
         private StudentBLL aStudentBll;
         private Result aResult;
+
         public ResultSheetUI()
         {
             InitializeComponent();
@@ -26,7 +25,7 @@ namespace StudentResultInfoApp.UI
 
         private void findButtonInResultSheet_Click(object sender, EventArgs e)
         {
-             aStudent = new Student();
+            aStudent = new Student();
             aStudentBll = new StudentBLL();
             aResult = new Result();
             aStudent.StudentRegNo = studentRegNoTextBoxInResultSheet.Text;
@@ -47,53 +46,48 @@ namespace StudentResultInfoApp.UI
             string grade = aResult.CalculateGrade(result);
             gradeLetterTextBox.Text = grade;
 
-            aStudent.DoSomething();
 
-            DoWhat();
-        }
-
-        private void DoWhat()
-        {
-            public double CalculateAvg(Student aStudent)
-        {
-            aResultGateWay = new ResultGateWay();
-            List<double> allResult = new List<double>();
-
+            ShoInListViewFromDB(aStudent);
             
-            allResult = aResultGateWay.GetAllScore(aStudent);
-
-            double total = 0;
-
-            foreach (double d in allResult)
-            {
-            total += d;
-            }
-
-
-            double avgResult = total/allResult.Count;
-
-
-            return avgResult;
         }
 
-        public string CalculateGrade(double score)
+
+        private Course aCourse;
+        private CourseBLL aCourseBll;
+
+        private void ShoInListViewFromDB(Student aStudent)
         {
-            if (score >= 90)
-                return "A";
-            else if(score >= 70 && score < 90)
+
+
+
+            resultSheetListView.Items.Clear();
+
+            List<Course> courses = new List<Course>();
+            ListViewItem listViewItem = new ListViewItem();
+
+            aCourseBll = new CourseBLL();
+            courses = aCourseBll.ShoInListViewFromDB(aStudent);
+
+
+
+
+
+            int i = 1;
+            foreach (Course aCourse in courses)
             {
-                return "B";
+
+
+
+                ListViewItem listViewItem1 = new ListViewItem(i.ToString());
+                listViewItem1.SubItems.Add(aCourse.CourseName);
+                listViewItem1.SubItems.Add(aCourse.EnrollDate);
+
+                resultSheetListView.Items.Add(listViewItem1);
+
+                i++;
             }
-            else if (score >= 50 && score < 70)
-            {
-                return "C";
-            }
-            else
-            {
-                return "F";
-            }
+
+
         }
-        }
-    }
     }
 }

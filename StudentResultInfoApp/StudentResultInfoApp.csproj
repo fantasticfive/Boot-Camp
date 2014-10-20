@@ -46,11 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CourseBLL.cs" />
+    <Compile Include="BLL\ResultBll.cs" />
     <Compile Include="BLL\StudentBLL.cs" />
     <Compile Include="DAL\DAO\Course.cs" />
+    <Compile Include="DAL\DAO\Result.cs" />
     <Compile Include="DAL\DAO\Student.cs" />
     <Compile Include="DAL\GATEWAY\CourseGateWay.cs" />
+    <Compile Include="DAL\GATEWAY\ResultGateWay.cs" />
     <Compile Include="DAL\GATEWAY\StudentGateway.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="UI\EnrollUI.cs">
       <SubType>Form</SubType>
     </Compile>

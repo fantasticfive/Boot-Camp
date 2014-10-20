@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +121,7 @@
             this.groupBox1.Controls.Add(this.studentEnrollCourseListView);
             this.groupBox1.Location = new System.Drawing.Point(12, 229);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(463, 134);
+            this.groupBox1.Size = new System.Drawing.Size(529, 134);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enrolled Course";
@@ -129,11 +130,12 @@
             // 
             this.studentEnrollCourseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.studentEnrollCourseListView.GridLines = true;
             this.studentEnrollCourseListView.Location = new System.Drawing.Point(10, 19);
             this.studentEnrollCourseListView.Name = "studentEnrollCourseListView";
-            this.studentEnrollCourseListView.Size = new System.Drawing.Size(430, 109);
+            this.studentEnrollCourseListView.Size = new System.Drawing.Size(513, 109);
             this.studentEnrollCourseListView.TabIndex = 0;
             this.studentEnrollCourseListView.UseCompatibleStateImageBehavior = false;
             this.studentEnrollCourseListView.View = System.Windows.Forms.View.Details;
@@ -173,13 +175,15 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Course  Title";
-            this.columnHeader1.Width = 150;
+            this.columnHeader1.Text = "Course No";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Enrollment Date";
-            this.columnHeader2.Width = 250;
+            this.columnHeader2.Text = "Course Name";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Enroll Date";
             // 
             // EnrollUI
             // 
@@ -201,6 +205,7 @@
             this.Controls.Add(this.regNoFindButton);
             this.Name = "EnrollUI";
             this.Text = "EnrollUI";
+            this.Load += new System.EventHandler(this.EnrollUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,5 +230,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

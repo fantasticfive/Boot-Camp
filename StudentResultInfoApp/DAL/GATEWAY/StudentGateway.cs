@@ -111,29 +111,6 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
 
 
-        public List<Course> GetAllCourse()
-        {
-            connection.Open();
-            string querry = string.Format("SELECT * FROM t_Course");
-            SqlCommand command = new SqlCommand(querry, connection);
-            SqlDataReader aReader = command.ExecuteReader();
-            List<Course> cousres = new List<Course>();
-            if (aReader.HasRows)
-            {
-
-                while (aReader.Read())
-                {
-                    Course aCourse = new Course();
-                    aCourse.CourseName = aReader[1].ToString();
-                    cousres.Add(aCourse);
-                }
-
-
-            }
-
-            connection.Close();
-            return cousres;
-        }
 
 
 
@@ -176,62 +153,6 @@ namespace StudentResultInfoApp.DAL.GATEWAY
 
         }
 
-        public List<Student> ShowStudentInfoListView(Student aStudent)
-        {
-            connection.Open();
-            string querry = string.Format("SELECT * FROM t_Course");
-            SqlCommand command = new SqlCommand(querry, connection);
-            
-            SqlDataReader aReader = command.ExecuteReader();
-            
-            
-            List<Student> students = new List<Student>();
-            
-            //ListView students = new ListView();
-            
-            
-            
-            if (aReader.HasRows)
-            {
-
-                while (aReader.Read())
-                {
-                   
-                }
-
-            }
-            connection.Close();
-            //return students;
-            return aStudent;
-
-        }
-
-        public void DoSomething()
-        {
-            connection.Open();
-            string querry = string.Format("SELECT * FROM t_Course");
-            SqlCommand command = new SqlCommand(querry, connection);
-
-            SqlDataReader aReader = command.ExecuteReader();
-
-
-            List<Student> students = new List<Student>();
-
-            //ListView students = new ListView();
-
-
-
-            if (aReader.HasRows)
-            {
-
-                while (aReader.Read())
-                {
-
-                }
-
-            }
-            connection.Close();
-           
-        }
+       
     }
 }

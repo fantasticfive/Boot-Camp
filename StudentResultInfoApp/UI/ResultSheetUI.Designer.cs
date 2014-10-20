@@ -30,10 +30,6 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.resultSheetListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.findButtonInResultSheet = new System.Windows.Forms.Button();
             this.gradeLetterTextBox = new System.Windows.Forms.TextBox();
             this.averageScoreTextBoxInResultSheet = new System.Windows.Forms.TextBox();
@@ -46,6 +42,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.groupBox2.Controls.Add(this.resultSheetListView);
             this.groupBox2.Location = new System.Drawing.Point(14, 106);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(517, 152);
+            this.groupBox2.Size = new System.Drawing.Size(530, 152);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Result";
@@ -66,34 +67,15 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.resultSheetListView.GridLines = true;
-            this.resultSheetListView.Location = new System.Drawing.Point(0, 19);
+            this.resultSheetListView.Location = new System.Drawing.Point(10, 19);
             this.resultSheetListView.Name = "resultSheetListView";
             this.resultSheetListView.Size = new System.Drawing.Size(507, 121);
             this.resultSheetListView.TabIndex = 13;
             this.resultSheetListView.UseCompatibleStateImageBehavior = false;
             this.resultSheetListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Course Code";
-            this.columnHeader1.Width = 106;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Title";
-            this.columnHeader2.Width = 200;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Score";
-            this.columnHeader3.Width = 115;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Grade Letter";
-            this.columnHeader4.Width = 83;
             // 
             // findButtonInResultSheet
             // 
@@ -133,9 +115,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Average Score(%)";
+            this.label4.Text = "Average Result(%)";
             // 
             // studentEmailTextBoxInResultSheet
             // 
@@ -205,6 +187,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Si No";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Course Code";
+            this.columnHeader2.Width = 96;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Title";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Score";
+            this.columnHeader4.Width = 86;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Grade Letter";
+            this.columnHeader5.Width = 123;
+            // 
             // ResultSheetUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +246,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

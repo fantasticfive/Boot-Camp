@@ -23,6 +23,17 @@ namespace StudentResultInfoApp.UI
         public ResultEntryUI()
         {
             InitializeComponent();
+            List<Course> courses = new List<Course>();
+
+
+            aStudentBll = new StudentBLL();
+            studentCourseComboBox.DisplayMember = "CourseName";
+            courses = aStudentBll.GetAllCourse();
+            foreach (Course aCourse in courses)
+            {
+                studentCourseComboBox.Items.Add(aCourse.CourseName);
+            }
+
         }
 
 
@@ -54,25 +65,27 @@ namespace StudentResultInfoApp.UI
             aResult = new Result();
 
 
-            aStudent.StudentRegNo = studentRegNoTextBox.Text;
+             aStudent.StudentRegNo = studentRegNoTextBox.Text;
             aStudent.StudentName = studentNameTextBox.Text;
             aStudent.StudentEmail = studentEmailTextBox.Text;
             aStudent.StudentCourse = studentCourseComboBox.Text;
             aStudent.EnrollDate = courseEnrollDateTimePicker.Text;
             aStudent.ScorePersent = Convert.ToDouble(scorePersentTextBox.Text);
+            aResult.Score = aStudent.ScorePersent;
 
-            string msg  = "";
+            string msg  = "op Performed";
 
 
-             aStudentBll.SaveForResultUi(aStudent,aResult);
-            aResultBll.SaveFromResultUi(aResult);
+           aStudentBll.SaveForResultUi(aStudent,aResult);
+           string aa = aResultBll.SaveFromResultUi(aResult,aStudent);
 
-            MessageBox.Show(msg);
+            MessageBox.Show(aa);
         }
 
         private void viewResultSheetButton_Click(object sender, EventArgs e)
         {
-
+            ResultSheetUI aResultSheetUi = new ResultSheetUI();
+            aResultSheetUi.ShowDialog();
         }
 
      
